@@ -1,4 +1,5 @@
 import { Component, EventEmitter, inject, Input, OnInit, Output } from '@angular/core';
+import { UiService } from '../../services/ui.service';
 
 @Component({
   selector: 'app-button',
@@ -9,7 +10,7 @@ export class ButtonComponent implements OnInit {
   @Input() text!: string;
   @Input() color!: string;
   @Output() btnClick = new EventEmitter();
-  constructor() {
+  constructor(private uiService: UiService) {
   }
 
   ngOnInit(): void {
@@ -17,9 +18,5 @@ export class ButtonComponent implements OnInit {
 
   onClick() {
     this.btnClick.emit();
-  }
-
-  toggleAddTask() {
-
   }
 }

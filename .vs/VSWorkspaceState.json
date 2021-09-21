@@ -11,6 +11,6 @@
     "\\src\\app\\components\\tasks",
     "\\src\\app\\services"
   ],
-  "SelectedNode": "\\src\\app\\components\\tasks\\tasks.component.ts",
+  "SelectedNode": "\\src\\app\\components\\task-item\\task-item.component.html",
   "PreviewInSolutionExplorer": false
 }
