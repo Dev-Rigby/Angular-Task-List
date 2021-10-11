@@ -1,16 +1,15 @@
 {
   "ExpandedNodes": [
     "",
-    "\\src",
-    "\\src\\app",
     "\\src\\app\\components",
+    "\\src\\app\\components\\about",
     "\\src\\app\\components\\add-task",
     "\\src\\app\\components\\button",
+    "\\src\\app\\components\\footer",
     "\\src\\app\\components\\header",
     "\\src\\app\\components\\task-item",
     "\\src\\app\\components\\tasks",
     "\\src\\app\\services"
   ],
-  "SelectedNode": "\\src\\app\\components\\task-item\\task-item.component.html",
   "PreviewInSolutionExplorer": false
 }

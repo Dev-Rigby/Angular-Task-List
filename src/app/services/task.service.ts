@@ -5,7 +5,8 @@ import { Task } from '../Task';
 
 const httpOptions = {
   headers: new HttpHeaders({
-    'Content-Type': 'application/json'
+    'Content-Type': 'application/json',
+    'X-API-Version': '1.0'
   })
 }
 
@@ -13,17 +14,18 @@ const httpOptions = {
   providedIn: 'root'
 })
 export class TaskService {
-  private apiUrl = 'http://localhost:5000/tasks';
+  private apiUrl = 'https://localhost:44326/TaskList';
 
   constructor(private http:HttpClient) { }
 
   getTasks(): Observable<Task[]> {
-    return this.http.get<Task[]>(this.apiUrl);
+    console.log(this.http.get<Task[]>(this.apiUrl));
+    return this.http.get<Task[]>(this.apiUrl, httpOptions);
   }
 
   deleteTask(task: Task): Observable<Task> {
     const url = `${this.apiUrl}/${task.id}`;
-    return this.http.delete<Task>(url);
+    return this.http.delete<Task>(url, httpOptions);
   }
 
   updateTaskReminder(task: Task): Observable<Task> {
